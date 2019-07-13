@@ -153,14 +153,15 @@ public class Gruppo extends ViewGroup
 				final View oggetto=getChildAt(a);
 				final Info info=(Info)oggetto.getLayoutParams();
 				final double x,y,altezza,larghezza;
-				if(!info.antiTransX)x=-transX+info.transX*unitaX;
-				else x=0;
-				if(!info.antiTransY)y=-transY+info.transY*unitaY;
-				else y=0;
-				larghezza=info.larghezza*unitaX+x;
-				altezza=info.altezza*unitaY+y;
-				x=info.x*unitaX+x;
-				y=info.y*unitaY+y;
+				double x2,y2;
+				if(!info.antiTransX)x2=-transX+info.transX*unitaX;
+				else x2=0;
+				if(!info.antiTransY)y2=-transY+info.transY*unitaY;
+				else y2=0;
+				larghezza=info.larghezza*unitaX+x2;
+				altezza=info.altezza*unitaY+y2;
+				x=info.x*unitaX+x2;
+				y=info.y*unitaY+y2;
 				if(larghezza>0&&altezza>0&&x<maxX*unitaX&&y<maxY*unitaY)schermo.runOnUiThread(new Runnable()
 						{
 							public void run()

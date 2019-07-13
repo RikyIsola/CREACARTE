@@ -21,7 +21,7 @@ public abstract class Processo extends Thread
 	{
 		return schermo;
 	}
-	public abstract void run()
+	public abstract void run();
 	public Processo loop()
 	{
 		Looper.prepare();

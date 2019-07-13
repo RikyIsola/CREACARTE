@@ -239,7 +239,7 @@ public abstract class Lan
 			System.out.println(e);
 		}
 	}
-	public abstract void leggi(String messaggio,Socket socket)
+	public abstract void leggi(String messaggio,Socket socket);
 	public void manda(final String messaggio)
 	{
 		while(mandare==null||mandare.handler()==null);

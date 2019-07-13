@@ -34,7 +34,7 @@ public abstract class ListaFile extends Finestra
 		g.removeAllViews();
 		inizializza();
 	}
-	abstract void fine(String file)
+	abstract void fine(String file);
 	private View.OnClickListener apri(final String file,final boolean directory)
 	{return new View.OnClickListener()
 	{
